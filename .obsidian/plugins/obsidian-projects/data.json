@@ -1,0 +1,227 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "fieldConfig": {
+        "Budget Category": {
+          "options": [
+            "Fixed monthly expenses",
+            "Non-fixed costs",
+            "Вне Budgetа"
+          ]
+        }
+      },
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [
+        "Templates/💳 Account Template.md",
+        "Templates/🛒 Template flow category.md",
+        "Templates/💵 Income Category Template.md"
+      ],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#Financial_accounting",
+          "hierarchy": true
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "tags": {
+                "hide": true,
+                "width": 149
+              },
+              "path": {
+                "hide": true
+              },
+              "Status": {
+                "width": 112
+              },
+              "name": {
+                "width": 237
+              },
+              "Credit limit": {
+                "width": 195
+              },
+              "Liquid": {
+                "width": 163
+              },
+              "Budget": {
+                "width": 117,
+                "hide": true
+              },
+              "Budget Category": {
+                "width": 209,
+                "hide": true
+              },
+              "created": {
+                "hide": true
+              },
+              "MOC": {
+                "hide": true
+              },
+              "updated": {
+                "hide": true
+              }
+            },
+            "orderFields": [
+              "name",
+              "Account currency",
+              "Credit limit",
+              "Status",
+              "Liquid",
+              "Limit"
+            ]
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": [
+              {
+                "field": "tags",
+                "operator": "has-keyword",
+                "enabled": true,
+                "value": "Account"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "8cc321d5-97ad-4f2a-ab5c-04ed6352edf5",
+          "name": "Accounts",
+          "type": "table"
+        },
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              },
+              "Account currency": {
+                "hide": true
+              },
+              "Budget Category": {
+                "width": 270
+              },
+              "Credit limit": {
+                "hide": true
+              },
+              "Liquid": {
+                "hide": true
+              },
+              "created": {
+                "hide": true
+              },
+              "MOC": {
+                "hide": true
+              },
+              "tags": {
+                "hide": true
+              },
+              "updated": {
+                "hide": true
+              }
+            }
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": [
+              {
+                "field": "tags",
+                "operator": "has-keyword",
+                "enabled": true,
+                "value": "Expen"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "be73446d-ade4-4174-912b-603effa06b3c",
+          "name": "Expenses",
+          "type": "table"
+        },
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              },
+              "Budget": {
+                "hide": true
+              },
+              "Account currency": {
+                "hide": true
+              },
+              "Budget Category": {
+                "hide": true
+              },
+              "Credit limit": {
+                "hide": true
+              },
+              "Liquid": {
+                "hide": true
+              },
+              "created": {
+                "hide": true
+              },
+              "MOC": {
+                "hide": true
+              },
+              "tags": {
+                "hide": true
+              },
+              "updated": {
+                "hide": true
+              }
+            }
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": [
+              {
+                "field": "tags",
+                "operator": "has-keyword",
+                "enabled": true,
+                "value": "Income"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "458d42c6-78fd-4a83-9933-869b59a0db48",
+          "name": "Income",
+          "type": "table"
+        }
+      ],
+      "id": "aee6ab47-effb-4c55-ab42-bdd50941bf1b",
+      "name": "Financial accounting"
+    }
+  ],
+  "archives": [],
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    },
+    "locale": {
+      "firstDayOfWeek": "default"
+    },
+    "commands": [],
+    "linkBehavior": "open-editor"
+  }
+}

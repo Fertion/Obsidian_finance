@@ -1,0 +1,61 @@
+{
+  "editorPosition": "right",
+  "attachShortcutToGlobalWindow": false,
+  "globalNamespace": "MF",
+  "formDefinitions": [
+    {
+      "title": "Financial accounting",
+      "name": "TransactionForm",
+      "fields": [
+        {
+          "name": "from",
+          "label": "From",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "dataview",
+            "query": "(() => {\n    let accountCount = {};\n\n    async function getAllAccounts() {\n        let accountsFromAccounts = dv.pages(\"#Financial_accounting/Accounts\").where(p => p.Status === true);\n        let accountsFromIncome = dv.pages(\"#Financial_accounting/Income\").where(p => p.Status === true);\n\n        let allAccounts = [...accountsFromAccounts, ...accountsFromIncome];\n\n        allAccounts = allAccounts.filter(p => !p.file.name.includes(\"Template\"));\n\n        return allAccounts.map(p => p.file.name).sort();\n    }\n\n    async function processPages() {\n        let thirtyDaysAgo = new Date();\n        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);\n\n        let allAccounts = await getAllAccounts();\n        let validAccountsSet = new Set(allAccounts); \n\n        for (let page of dv.pages().where(page => page.chronicle_date).values) {\n            let chronicleDate = new Date(page.chronicle_date);\n\n            if (chronicleDate > thirtyDaysAgo) {\n                let content = await dv.io.load(page.file.path);\n                let lines = content.split(\"\\n\");\n                let foundFinancialSection = false;\n\n                for (let line of lines) {\n                    if (line.trim() === \"# Financial Accounting\") {\n                        foundFinancialSection = true;\n                    } else if (foundFinancialSection && line.trim().startsWith(\"💱 |\")) {\n                        let [, fromAccount, toAccount, amount] = line.split(\"|\").map(s => s.trim());\n\n                        if (validAccountsSet.has(fromAccount)) {\n                            accountCount[fromAccount] = (accountCount[fromAccount] || 0) + 1;\n                        }\n                    }\n                }\n            }\n        }\n\n        for (let account of allAccounts) {\n            if (!accountCount[account]) {\n                accountCount[account] = 0;\n            }\n        }\n\n        let sortedAccounts = Object.entries(accountCount)\n            .sort(([, countA], [, countB]) => countB - countA)\n            .map(([account]) => account);\n\n        return sortedAccounts; \n    }\n\n    return processPages().then(sortedAccounts => {\n        dv.list(sortedAccounts); \n        return sortedAccounts; \n    });\n})();"
+          }
+        },
+        {
+          "name": "to",
+          "label": "To",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "dataview",
+            "query": "(() => {\n    let accountCount = {};\n\n    async function getAllAccounts() {\n        let accountsFromAccounts = dv.pages(\"#Financial_accounting/Accounts\").where(p => p.Status === true);\n        let accountsFromIncome = dv.pages(\"#Financial_accounting/Expense\").where(p => p.Status === true);\n\n        // Объединяем списки\n        let allAccounts = [...accountsFromAccounts, ...accountsFromIncome];\n\n        allAccounts = allAccounts.filter(p => !p.file.name.includes(\"Template\"));\n\n        return allAccounts.map(p => p.file.name).sort();\n    }\n\n    async function processPages() {\n        let thirtyDaysAgo = new Date();\n        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);\n\n\n        let allAccounts = await getAllAccounts();\n        let validAccountsSet = new Set(allAccounts); \n\n        for (let page of dv.pages().where(page => page.chronicle_date).values) {\n            let chronicleDate = new Date(page.chronicle_date);\n\n            if (chronicleDate > thirtyDaysAgo) {\n                let content = await dv.io.load(page.file.path);\n                let lines = content.split(\"\\n\");\n                let foundFinancialSection = false;\n\n                for (let line of lines) {\n                    if (line.trim() === \"# Financial Accounting\") {\n                        foundFinancialSection = true;\n                    } else if (foundFinancialSection && line.trim().startsWith(\"💱 |\")) {\n                        let [, fromAccount, toAccount, amount] = line.split(\"|\").map(s => s.trim());\n                        fromAccount = toAccount; \n\n\n                        if (validAccountsSet.has(fromAccount)) {\n                            accountCount[fromAccount] = (accountCount[fromAccount] || 0) + 1;\n                        }\n                    }\n                }\n            }\n        }\n\n\n        for (let account of allAccounts) {\n            if (!accountCount[account]) {\n                accountCount[account] = 0;\n            }\n        }\n\n\n        let sortedAccounts = Object.entries(accountCount)\n            .sort(([, countA], [, countB]) => countB - countA)\n            .map(([account]) => account);\n\n        return sortedAccounts; \n    }\n\n    return processPages().then(sortedAccounts => {\n        dv.list(sortedAccounts); \n        return sortedAccounts; \n    });\n})();"
+          }
+        },
+        {
+          "name": "amount_out",
+          "label": "Amount out",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "number"
+          }
+        },
+        {
+          "name": "amount_in",
+          "label": "Amount in",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number"
+          }
+        },
+        {
+          "name": "comment",
+          "label": "Comment",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text"
+          }
+        }
+      ],
+      "version": "1"
+    }
+  ]
+}

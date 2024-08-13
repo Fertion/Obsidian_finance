@@ -1,0 +1,271 @@
+{
+  "main": {
+    "id": "cefd9f1c4545ad4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "25b020366d3a94c5",
+        "type": "split",
+        "children": [
+          {
+            "id": "3611b8c1cc1580af",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8789c15a0971d4f6",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Reports/Operation search.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "a063eacdd145e539",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3f39bd9986868004",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Reports/Budgeting report.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "79d61ba37998b7e9",
+        "type": "split",
+        "children": [
+          {
+            "id": "3593553cc29af579",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0e02cb0cb92dec60",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Reports/Report on Income and Expenses.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "1af6087aac2b5017",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5591e35ba4c7047c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Accounts and categories/💳 Bank card 1.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "92aed7edc06c52da",
+    "type": "split",
+    "children": [
+      {
+        "id": "14f2a16928af023c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35f5c547ac2d7b10",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7d510bd4602e32d8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cd198eabb4ecbc20",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "23ec889580af30cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "e425cc7ad1a47c23",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b1d8c43196797808",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Accounts and categories/💳 Bank card 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "17242b0b7a6dea35",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Accounts and categories/💳 Bank card 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cbb58f4e01e8735f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fa1055e3997bd0f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Accounts and categories/💳 Bank card 1.md"
+              }
+            }
+          },
+          {
+            "id": "6fd21113457eb148",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 315.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "modalforms:Edit forms": false,
+      "obsidian-projects:Open projects": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "5591e35ba4c7047c",
+  "lastOpenFiles": [
+    "Reports/Report on Income and Expenses.md",
+    "Reports/Budgeting report.md",
+    "Reports/Operation search.md",
+    "Daily Notes/2024.08.13.md",
+    "Reports/Report by category of expenditure.md",
+    "Reports/Report on All Accounts.md",
+    "Daily Notes/2024.05.13.md",
+    "Accounts and categories/💵 Salary.md",
+    "Accounts and categories/💳 Bank deposit 2.md",
+    "Reports/Key financial indicators.md",
+    "Templates/🛒 Template flow category.md",
+    "Accounts and categories/🛒 Transport.md",
+    "Reports/Report by Income Categories.md",
+    "Accounts and categories/🛒 Supermarkets.md",
+    "Accounts and categories/💵 Cashback.md",
+    "Daily Notes/2024.06.13.md",
+    "Daily Notes/2024.07.13.md",
+    "Accounts and categories/💳 Bank card 1.md",
+    "Templates/💳 Account Template.md",
+    "Daily Notes/2024.03.13.md",
+    "Accounts and categories/💳 Bank card 2.md",
+    "Accounts and categories/💳 Cash.md",
+    "Accounts and categories/💵 Interest on account.md",
+    "Accounts and categories/🛒 Fast food.md",
+    "Accounts and categories/🛒 Rent.md",
+    "Templates/💵 Income Category Template.md",
+    "Ежедневные заметки/Перенос транзакций в Obsidian.xlsx~RFb847a8.TMP",
+    "Ежедневные заметки/lu169206z20r.tmp",
+    "Ежедневные заметки/lu117285qbd.tmp",
+    "Ежедневные заметки/Перенос транзакций в Obsidian.xlsx",
+    "Ежедневные заметки/lu126446mzel.tmp",
+    "Ежедневные заметки/lu126446mzej.tmp",
+    "Ежедневные заметки/lu74886h215.tmp",
+    "Ежедневные заметки/lu75485s00k.tmp",
+    "Ежедневные заметки/lu150845m5bq.tmp",
+    "Ежедневные заметки/Электронная таблица OpenDocument.xlsx~RF916f91.TMP",
+    "Pasted image 20240807222737.png"
+  ]
+}
